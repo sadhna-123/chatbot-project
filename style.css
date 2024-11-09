@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 0;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #0d4c99;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    position: relative;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px;
+    display: block;
+}
+
+.navbar ul li:hover {
+    background-color: #FFD700;
+    border-radius: 5px;
+}
+
+.navbar ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0d4c99;
+    min-width: 160px;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+}
+
+.navbar ul li:hover .dropdown-content {
+    display: block;
+}
+
+.navbar ul li .dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navbar ul li .dropdown-content a:hover {
+    background-color: #FFD700;
+    border-radius: 5px;
+}
+
+.chatbox-container {
+    width: 400px;
+    height: 500px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.chatbox-header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.chatbox-body {
+    overflow-y: auto;
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.chatbox-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.chatbox-footer input {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.chatbox-footer button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chatbox-footer button:hover {
+    background-color: #0056b3;
+}
+
+.bot-message, .user-message {
+    margin-bottom: 10px;
+}
+
+.bot-message p, .user-message p {
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.bot-message p {
+    background-color: #f0f0f0;
+}
+
+.user-message p {
+    background-color: #007BFF;
+    color: white;
+    text-align: right;
+}
