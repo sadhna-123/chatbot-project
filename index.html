@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT Ujjain Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <ul>
+            <li class="dropdown">
+                <a href="#">Home</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">About Us</a>
+                <div class="dropdown-content">
+                    <a href="#">Overview</a>
+                    <a href="#">History</a>
+                    <a href="#">Vision & Mission</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Academics</a>
+                <div class="dropdown-content">
+                    <a href="#">Courses</a>
+                    <a href="#"> Eligibility</a>
+                    <a href="#">Faculty</a>
+                    <a href="#">Research</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Admissions</a>
+                <div class="dropdown-content">
+                    <a href="#">Admission Process</a>
+                    <a href="#">Fee Structure</a>
+                    <a href="#">Scholarships</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Placements</a>
+                <div class="dropdown-content">
+                    <a href="#">Placements</a>
+                    <a href="#">Recruiters</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Campus Life</a>
+                <div class="dropdown-content">
+                    <a href="#">Facilities</a>
+                    <a href="#">Sports</a>
+                    <a href="#">Events</a>
+                </div>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Chatbox Section -->
+    <div class="chatbox-container">
+        <div class="chatbox-header">
+            <h2> Chatbot</h2>
+        </div>
+        <div class="chatbox-body" id="chatbox-body">
+            <div class="bot-message">
+                <p>Hello! I can provide you information about Mahakal Institute of Technology, Ujjain. Ask me anything!</p>
+            </div>
+        </div>
+        <div class="chatbox-footer">
+            <input type="text" id="user-input" placeholder="Ask your question..." onkeyup="checkEnter(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
