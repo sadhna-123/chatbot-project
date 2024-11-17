@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,51 +11,53 @@
     <!-- Navbar Section -->
     <div class="navbar">
         <ul>
+
+            <img src="./logo_nav.jpg" 
+        style="  margin: 2px; height: 40px; margin-right: 190px;"> 
             <li class="dropdown">
                 <a href="#">Home</a>
             </li>
             <li class="dropdown">
                 <a href="#">About Us</a>
                 <div class="dropdown-content">
-                    <a href="#">Overview</a>
-                    <a href="#">History</a>
-                    <a href="#">Vision & Mission</a>
+                    <a href="#" onclick="triggerChatBot('about')">Overview</a>
+                    <a href="#" onclick="triggerChatBot('History')">History</a>
+                    <a href="#" onclick="triggerChatBot('vision')">Vision & Mission</a>
                 </div>
             </li>
             <li class="dropdown">
                 <a href="#">Academics</a>
                 <div class="dropdown-content">
-                    <a href="#">Courses</a>
-                    <a href="#"> Eligibility</a>
-                    <a href="#">Faculty</a>
-                    <a href="#">Research</a>
+                    <a href="#" onclick="triggerChatBot('courses')">Courses</a>
+                    <a href="#" onclick="triggerChatBot('faculty')">Faculty</a>
+                    <a href="#" onclick="triggerChatBot('research')">Research</a>
                 </div>
             </li>
             <li class="dropdown">
                 <a href="#">Admissions</a>
                 <div class="dropdown-content">
-                    <a href="#">Admission Process</a>
-                    <a href="#">Fee Structure</a>
-                    <a href="#">Scholarships</a>
+                    <a href="#" onclick="triggerChatBot('admission')">Admission Process</a>
+                    <a href="#" onclick="triggerChatBot('fee')">Fee Structure</a>
+                    <a href="#" onclick="triggerChatBot('scholarship')">Scholarships</a>
                 </div>
             </li>
             <li class="dropdown">
                 <a href="#">Placements</a>
                 <div class="dropdown-content">
-                    <a href="#">Placements</a>
-                    <a href="#">Recruiters</a>
+                    <a href="#" onclick="triggerChatBot('placement')">Placements</a>
+                    <a href="#" onclick="triggerChatBot('recruiters')">Recruiters</a>
                 </div>
             </li>
             <li class="dropdown">
                 <a href="#">Campus Life</a>
                 <div class="dropdown-content">
-                    <a href="#">Facilities</a>
-                    <a href="#">Sports</a>
-                    <a href="#">Events</a>
+                    <a href="#" onclick="triggerChatBot('facilities')">Facilities</a>
+                    <a href="#" onclick="triggerChatBot('sports')">Sports</a>
+                    <a href="#" onclick="triggerChatBot('events')">Events</a>
                 </div>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a href="#" onclick="triggerChatBot('contact')">Contact</a>
             </li>
         </ul>
     </div>
@@ -62,7 +65,9 @@
     <!-- Chatbox Section -->
     <div class="chatbox-container">
         <div class="chatbox-header">
-            <h2> Chatbot</h2>
+            <img src="./logo_nav.jpg" 
+            style="  margin: 2px; height: 40px;">
+            <h2 style="margin-left: 80px;">MIT Chatbot</h2>
         </div>
         <div class="chatbox-body" id="chatbox-body">
             <div class="bot-message">
@@ -74,6 +79,31 @@
             <button onclick="sendMessage()">Send</button>
         </div>
     </div>
+   
+    <!-- Footer -->
+    <!-- <footer>
+        <br> 
+        <p>© 2024 Mahakal Institute of Technology, Ujjain</p>
+    </footer> -->
+    <footer class="footer">
+        <br>
+        <h3>Recruiting Companies</h3>
+        <br>
+        <p>© 2024 Mahakal Institute of Technology, Ujjain</p>
+        <br>
+        <div class="company-logos">
+            <a href="#" target="_blank"><img src="https://mma.prnewswire.com/media/1433624/Jaro_Education_Logo.jpg?p=facebook" alt="Jaro Education Logo"></a>
+            <a href="#" target="_blank"><img src="https://logowik.com/content/uploads/images/byjus2816.jpg" alt="Byju's Logo"></a>
+            <a href="#" target="_blank"><img src="https://tse4.mm.bing.net/th?id=OIP.iz0l2PLYQDTZgy32ELt1UAHaEa&pid=Api&P=0&h=180" alt="TCS"></a>
+            <a href="#" target="_blank"><img src="https://tse2.mm.bing.net/th?id=OIP.uD-qoCYDsOBtmMRBB-5aOQHaHa&pid=Api&P=0&h=180" alt="Nestle Logo"></a>
+            <a href="#" target="_blank"><img src="https://tse1.mm.bing.net/th?id=OIP.d9ZwP01rfHO3mEONlr4tGgHaCP&pid=Api&P=0&h=180" alt="R1RCM Logo"></a>
+            <a href="#" target="_blank"><img src="https://tse2.mm.bing.net/th?id=OIP.DDQn1sfcycwMcd8J5cW2MQHaDf&pid=Api&P=0&h=180" alt="ICIC Prudential Logo"></a>
+            <a href="#" target="_blank"><img src="data:image/png;base64,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
+            
+            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" alt="Amazon Logo"></a>
+                        <!-- Add more company logos as needed -->
+                    </div>
+                </footer>
 
     <script src="script.js"></script>
 </body>
