@@ -51,7 +51,7 @@ body {
 }
 
 .navbar ul li:hover {
-    background-color: #FFD700;
+    background-color: #0a1347;
     border-radius: 5px;
 }
 
@@ -77,7 +77,7 @@ body {
 }
 
 .navbar ul li .dropdown-content a:hover {
-    background-color: #FFD700;
+    background-color: #0b0355;
     border-radius: 5px;
 }
 
@@ -90,17 +90,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 100px;
 }
 
 .chatbox-header {
-    background-color: #007BFF;
+    display: flex;
+    /* justify-content: space-between; */
+    background-color:#0d4c99;
     color: white;
     padding: 10px;
     text-align: center;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    justify-content: space-around;
+ 
 }
 
 .chatbox-body {
@@ -108,6 +110,11 @@ body {
     flex-grow: 1;
     padding: 10px;
     font-size: 14px;
+    background-image: url("./mitlogo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 90px;
 }
 
 .chatbox-footer {
@@ -157,7 +164,8 @@ body {
 }
 
 /* Footer Styles */
-footer {
+/* footer {
+
     text-align: center;
     padding: 20px;
     background-color: #0d4c99;
@@ -166,5 +174,62 @@ footer {
     bottom: 0;
     width: 100%;
     height:100px;
+  }
+   */
+   /* Full-Width Footer with Proper Distance in Images */
+.footer {
+    margin-top: 100px;
+    width: 100%;
+    background-color: #d7f0f4;
+    color: rgb(8, 26, 104);
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    height:200px;
+   
+  }
+  
+  .footer-companies {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-companies h3 {
+    font-size: 20px;
+    margin-bottom:2px;
+    color: rgb(9, 9, 9);
+  }
+  
+  .company-logos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:80px;  /* Added gap between logos */
+  
+  }
+  
+  .company-logos img {
+    width: 60px;  /* Adjusted image size */
+    height: auto;
+    transition: transform 0.3s;
+    margin: 10px;  /* Added margin for spacing */
+    mix-blend-mode: multiply;  /* Apply blend effect */
+  }
+  
+  .company-logos img:hover {
+    transform: scale(1.1);
+  }
+  
+
+  .fixed-map {
+    position: fixed; /* Ensures the map stays in the same place while scrolling */
+    bottom: 220px; /* Adjust distance from the bottom of the page */
+    right: 20px; /* Adjust distance from the right edge */
+    width: 300px; /* Map width */
+    height: 250px; /* Map height */
+    z-index: 1000; /* Keeps it above other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for better visibility */
+    border-radius: 8px; /* Optional: Rounded corners */
+    overflow: hidden; /* Prevents content spill */
   }
   
