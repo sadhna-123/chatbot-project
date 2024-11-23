@@ -1,5 +1,3 @@
-
-//============================================================
 // Information based on the navbar items
 const infoMessages = {
     "about": "Mahakal Institute of Technology (MIT) is a private engineering college located in Ujjain, Madhya Pradesh. It offers undergraduate and postgraduate programs in various engineering disciplines. Established in 2001, it is affiliated with Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal, and approved by AICTE.",
@@ -36,7 +34,6 @@ const infoMessages = {
     "globalExposure": "MIT Ujjain offers opportunities for global exposure through collaborations with international universities and organizations. Students have the chance to participate in exchange programs, research projects, and internships abroad.",
     "environment": "MIT Ujjain is committed to environmental sustainability. The campus is equipped with green technologies such as solar panels, rainwater harvesting systems, and waste management programs.",
     "socialResponsibility": "MIT Ujjain emphasizes social responsibility and encourages students to engage in community service. The college regularly organizes social outreach programs, health camps, and environmental awareness initiatives."
-    
 };
 
 // Function to send user input and get a response
@@ -78,84 +75,92 @@ function checkEnter(event) {
 
 // Function to process user query and return a response
 function getBotResponse(query) {
-    query = query.toLowerCase();
+    query = query.toLowerCase().trim();
 
     // Handle greetings like "Hello", "Hi", "Hey"
-    if (query.includes("hello") || query.includes("hi") || query.includes("hey")|| query.includes("hy")) {
+    if (query.match(/hello|hi|hey|hy/)) {
         return "Hello! How can I assist you today?";
     }
 
-    // Match user input with predefined responses
-    if (query.includes("about") || query.includes("information")) {
+    // Handle general queries like "How are you", "Who are you"
+    if (query.match(/how are you|who are you|what can you do/)) {
+        return "I'm the MIT Ujjain chatbot, here to assist you with all the information about MIT Ujjain!";
+    }
+
+    // Match user input with predefined responses for various topics
+    if (query.match(/about|information/)) {
         return infoMessages["about"];
-    } else if (query.includes("history") || query.includes("foundation")) {
+    } else if (query.match(/history|foundation/)) {
         return infoMessages["history"];
-    } else if (query.includes("vision") || query.includes("mission")) {
+    } else if (query.match(/vision|mission/)) {
         return infoMessages["vision"];
-    } else if (query.includes("course") || query.includes("program")) {
+    } else if (query.match(/course|program/)) {
         return infoMessages["courses"];
-    } else if (query.includes("faculty") || query.includes("professors")) {
+    } else if (query.match(/faculty|professors/)) {
         return infoMessages["faculty"];
-    } else if (query.includes("research") || query.includes("projects")) {
+    } else if (query.match(/research|projects/)) {
         return infoMessages["research"];
-    } else if (query.includes("admission") || query.includes("apply")) {
+    } else if (query.match(/admission|apply/)) {
         return infoMessages["admission"];
-    } else if (query.includes("fee") || query.includes("cost")) {
+    } else if (query.match(/fee|cost/)) {
         return infoMessages["fee"];
-    } else if (query.includes("scholarship") || query.includes("financial aid")) {
+    } else if (query.match(/scholarship|financial aid/)) {
         return infoMessages["scholarship"];
-    } else if (query.includes("placement") || query.includes("recruiters")) {
+    } else if (query.match(/placement|recruiters/)) {
         return infoMessages["placement"];
-    } else if (query.includes("recruiters") || query.includes("companies")) {
-        return infoMessages["recruiters"];
-    } else if (query.includes("facility") || query.includes("amenities")) {
+    } else if (query.match(/facility|amenities/)) {
         return infoMessages["facilities"];
-    } else if (query.includes("sports") || query.includes("games")) {
+    } else if (query.match(/sports|games/)) {
         return infoMessages["sports"];
-    } else if (query.includes("event") || query.includes("fest")) {
+    } else if (query.match(/event|fest/)) {
         return infoMessages["events"];
-    } else if (query.includes("contact") || query.includes("address")) {
+    } else if (query.match(/contact|address/)) {
         return infoMessages["contact"];
-    } else if (query.includes("cutoff") || query.includes("rank")) {
+    } else if (query.match(/cutoff/)) {
         return infoMessages["cutoff"];
-    } else if (query.includes("admission process") || query.includes("how to apply")) {
+    } else if (query.match(/admission process/)) {
         return infoMessages["admissionProcess"];
-    } else if (query.includes("infrastructure") || query.includes("campus")) {
+    } else if (query.match(/infrastructure/)) {
         return infoMessages["infrastructure"];
-    } else if (query.includes("student life") || query.includes("college life")) {
+    } else if (query.match(/student life/)) {
         return infoMessages["studentLife"];
-    } else if (query.includes("library") || query.includes("books")) {
+    } else if (query.match(/library/)) {
         return infoMessages["library"];
-    } else if (query.includes("hostel") || query.includes("accommodation")) {
+    } else if (query.match(/hostel/)) {
         return infoMessages["hostel"];
-    } else if (query.includes("canteen") || query.includes("food")) {
+    } else if (query.match(/canteen/)) {
         return infoMessages["canteen"];
-    } else if (query.includes("workshop") || query.includes("seminar")) {
+    } else if (query.match(/workshops/)) {
         return infoMessages["workshops"];
-    } else if (query.includes("internship") || query.includes("industry experience")) {
+    } else if (query.match(/internships/)) {
         return infoMessages["internships"];
-    } else if (query.includes("technical fest") || query.includes("techno mitra")) {
+    } else if (query.match(/technical fest/)) {
         return infoMessages["technicalFest"];
-    } else if (query.includes("cultural fest") || query.includes("sanskriti")) {
+    } else if (query.match(/cultural fest/)) {
         return infoMessages["culturalFest"];
-    } else if (query.includes("entrepreneurship") || query.includes("business ideas")) {
+    } else if (query.match(/entrepreneurship/)) {
         return infoMessages["entrepreneurship"];
-    } else if (query.includes("placement statistics") || query.includes("placement record")) {
+    } else if (query.match(/placements statistics/)) {
         return infoMessages["placementsStatistics"];
-    } else if (query.includes("achievements") || query.includes("awards")) {
+    } else if (query.match(/achievements/)) {
         return infoMessages["achievements"];
-    } else if (query.includes("research centers") || query.includes("labs")) {
+    } else if (query.match(/research centers/)) {
         return infoMessages["researchCenters"];
-    } else if (query.includes("alumni") || query.includes("alumni network")) {
+    } else if (query.match(/alumni/)) {
         return infoMessages["alumni"];
-    } else if (query.includes("global exposure") || query.includes("international programs")) {
+    } else if (query.match(/global exposure/)) {
         return infoMessages["globalExposure"];
-    } else if (query.includes("environment") || query.includes("sustainability")) {
+    } else if (query.match(/environment/)) {
         return infoMessages["environment"];
-    } else if (query.includes("social responsibility") || query.includes("community service")) {
+    } else if (query.match(/social responsibility/)) {
         return infoMessages["socialResponsibility"];
     } else {
-        // Provide MIT website link for more details
         return "For more detailed information, please visit the official MIT Ujjain website: <a href='https://mitujjain.ac.in' target='_blank'>https://mitujjain.ac.in</a>";
     }
+}
+
+// Function to simulate a navbar click and trigger chatbot response
+function triggerChatBot(item) {
+    const response = getBotResponse(item);
+    displayMessage(response, "bot");
 }
